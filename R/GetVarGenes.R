@@ -5,7 +5,7 @@
 get.var.genes <- function(sco,nvar){
 
   genes.var <- apply(sco@data,1,var)
-  top.var.genes <- names(rev(sort(genes.var))[1:nvar])
+  top.var.genes <- names(rev(sort(genes.var))[1:nvar]) #comment
   sco@var.genes <- top.var.genes #puts the var genes into a new slot
   sco #returns the new object
 }
